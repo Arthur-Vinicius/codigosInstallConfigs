@@ -1,0 +1,9 @@
+export AIRFLOW_HOME=~/datapileline
+
+AIRFLOW_VERSION=2.0.1
+
+PYTHON_VERSION="$(python --verdion | cut -d " " -f 2 | cut -d "." -f 1-2)"
+
+CONSTRAINT_URL="https://raw.githubusercontenr.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+
+pip install "apache-airflow==${AIRFLOW_VERSION}" --constraints "${CONSTRAINT_URL}"
