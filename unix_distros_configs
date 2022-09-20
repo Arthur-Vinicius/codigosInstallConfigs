@@ -1,6 +1,6 @@
 
-## opção 1
-Ubuntu 20.04 wsl2
+  ## opção 1
+    Ubuntu 20.04 wsl2
 
 sudo apt update && sudo apt upgrade ;
 
@@ -42,13 +42,43 @@ plugins=( [plugins...] zsh-syntax-highlighting) ;
 
 ZSH_THEME="spaceship" in your .zshrc ;
 
+  ## airflow 
+
+cd ~/ ;
+
+mkdir datapipeline ;
+
+cd datapipeline ;
+
+python3.7 -m venv .venv ;
+
+source .venv/bin/activate ;
+
+export AIRFLOW_HOME=~/datapileline/airflow ;
+
+AIRFLOW_VERSION=1.10.14 ;
+
+PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)" ;
+
+CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"  ;
+
+pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}" ;
+
+airflow db init ;
+
+airflow webserver ;
+
+jobs ;
+
+bg ;
+
+airflow scheduler ;
+
+bg ;
 
 
-
-
-
-## opção 2
-Ubuntu 20.04 wsl2
+  ## opção 2
+    Ubuntu 20.04 wsl2
 
 sudo apt update && sudo apt upgrade \
 
