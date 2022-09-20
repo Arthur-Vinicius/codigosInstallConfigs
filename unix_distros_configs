@@ -2,7 +2,7 @@
   ## opção 1
     Ubuntu 20.04 wsl2
 
-sudo apt update && sudo apt upgrade ;
+sudo apt update && sudo apt upgrade -y ;
 
 sudo apt install software-properties-common -y ;
 
