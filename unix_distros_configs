@@ -12,7 +12,7 @@ sudo apt update && sudo apt upgrade ;
 
 sudo apt install python3.7 -y ;
 
-sudo apt install python3.7-venv
+sudo apt install python3.7-venv -y ;
 
 
 ## opção 2
@@ -28,4 +28,4 @@ sudo apt update && sudo apt upgrade \
 
 sudo apt install python3.7 -y \
 
-sudo apt install python3.7-venv
+sudo apt install python3.7-venv -y \
