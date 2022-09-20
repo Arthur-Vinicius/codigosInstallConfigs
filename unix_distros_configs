@@ -1,0 +1,31 @@
+
+## opção 1
+Ubuntu 20.04 wsl2
+
+sudo apt update && sudo apt upgrade ;
+
+sudo apt install software-properties-common -y ;
+
+sudo add-apt-repository ppa:deadsnakes/ppa -y ;
+
+sudo apt update && sudo apt upgrade ;
+
+sudo apt install python3.7 -y ;
+
+sudo apt install python3.7-venv
+
+
+## opção 2
+Ubuntu 20.04 wsl2
+
+sudo apt update && sudo apt upgrade \
+
+sudo apt install software-properties-common -y \
+
+sudo add-apt-repository ppa:deadsnakes/ppa -y \
+
+sudo apt update && sudo apt upgrade \
+
+sudo apt install python3.7 -y \
+
+sudo apt install python3.7-venv
